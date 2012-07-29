@@ -1,0 +1,62 @@
+/**********************************************************
+* This is about Phonegap(cordova) Accelerometer
+* write by Allen Heavey
+* E-mail: ista.allen@gmail.com
+* Data: 7/29/2012
+************************************************************/
+
+/////////////////////////////////////////////////////////////
+Methods: 
+	accelerometer.getCurrentAcceleration
+	accelerometer.watchAcceleration
+	accelerometer.clearWatch	
+
+Arguments:
+	accelerometerSuccess
+	accelerometerError
+	accelerometerOptions
+
+Objects (Read-Only):
+	Acceleration
+///////////////////////////////////////////////////////////////
+
+----------------------------------------------------------------
+Acceleration:
+# It's an object. Contains Accelerometer data captured at a specific point in time.
+# The acceleration at a single moment in time. 
+	x:Amount of acceleration on the x-axis. (in m/s^2) (Number)
+	y:Amount of acceleration on the y-axis. (in m/s^2) (Number)
+	z:Amount of acceleration on the z-axis. (in m/s^2) (Number)
+	timestamp:Creation timestamp in milliseconds. (DOMTimeStamp)
+
+accelerometerOptions
+# An optional parameter to customize the retrieval of the accelerometer.	
+	frequency: How often to retrieve the Acceleration in milliseconds. (Number) (Default: 10000)
+$ var options = { frequency: 3000 };
+------------------------------------------------------------------
+
+	
+navigator.accelerometer.getCurrentAcceleration(success, error);
+	success(acceleration)
+		acceleration: (Acceleration)
+	error()
+
+navigator.accelerometer.watchAcceleration(success, error, options) <watchID>
+	success(acceleration)
+		acceleration: (Acceleration)
+	error()
+	options: (accelerometerOptions)
+
+navigator.accelerometer.clearWatch(watchID);
+	
+
+
+
+
+
+
+
+
+
+
+

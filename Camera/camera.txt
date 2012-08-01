@@ -1,0 +1,59 @@
+/*********************************************************
+* This is about Phonegap(cordova) Camera
+* write by Allen Heavey 
+* E-mail:codeday@qq.com
+* Date: 7/30/2012
+**********************************************************/
+
+Methods:
+	camera.getPicture
+	camera.cleanup
+
+cameraOptions
+	quality
+	destinationType
+	sourceType
+	allowEdit
+	encodingType
+	targetWidth
+	targetHeight
+	mediaType
+	correctOrientation
+	saveToPhotoAlbum
+	popoverOptions:CameraPopoverOptions
+
+CameraPopoverOptions
+	x
+	y
+	width
+	height
+	arrowDir
+
+navigator.camera.getPicture( success, error, [ cameraOptions ] );
+	success(imageData)
+		imageData:Base64 encoding of the image data, OR the image file URI, depending on cameraOptions used. (String);
+	error(message)
+		message: The message is provided by the device's native code. (String)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
